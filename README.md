@@ -280,14 +280,15 @@ zhinongbao-agri-data-book/
 
 ## 下载
 
-| 文件 | 说明 |
-|---|---|
-| `智农宝农业数据全书_v8.0.0.exe` | Windows 单文件，免安装，约 70 MB |
-| `智农宝农业数据全书_源码_v8.0.0.zip` | 全量源码，含构建与验收脚本 |
-| `智农宝农业数据全书_排印书稿_v8.0.0.docx` | 楷体 + TNR + 关键词三色的 Word 全量书稿 |
-| `zhinongbao-decision-agent.zip` | 独立决策 Agent Skill 包 |
+| 文件 | 说明 | 大小 |
+|---|---|---:|
+| `zhinongbao-book-v8.0.0-win64.exe` | Windows 单文件，免安装 | 67.4 MB |
+| `zhinongbao-source-v8.0.0.zip` | 全量源码，含构建与验收脚本 | 35.2 MB |
+| `zhinongbao-typeset-v8.0.0.docx` | 楷体 + TNR + 关键词三色的 Word 全量书稿 | 0.8 MB |
+| `zhinongbao-decision-agent-v8.0.0.zip` | 独立决策 Agent Skill 包 | 7.8 KB |
+| `sha256-v8.0.0.txt` | SHA-256 校验清单 | — |
 
-均在 [Releases](../../releases) 页面，附 `sha256_v8.txt` 校验。
+均在 [Releases](../../releases) 页面。Release 资产用 ASCII 名以保证跨平台下载不乱码，中文说明见上表。
 
 ---
 
