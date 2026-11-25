@@ -1,0 +1,42 @@
+# ── 构建与打包产物 ─────────────────────────────
+build/
+dist/
+*.pkg
+*.pyz
+_arch_*
+_v4_prev.exe
+
+# ── Python ────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ── 前端依赖 ──────────────────────────────────
+node_modules/
+package-lock.json
+
+# ── 第三方仓库克隆（仅作数据参考，不入库）──────────
+extra_data/AgML-CY-Bench/
+extra_data/AreaCity-JsSpider-StatsGov/
+extra_data/citystats/
+extra_data/price_yield_dataset/
+extra_data/_list.json
+extra_data/_probe.md
+
+# ── 历史参考包（体积大，非本项目产出）──────────────
+display/
+zn/
+
+# ── 预览截图 / 临时文件 ─────────────────────────
+preview_*.png
+_live_*.png
+studio_*.png
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# ── 运行时状态（含用户阅读进度，不应入库）──────────
+app/data/progress.json

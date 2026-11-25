@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14342a">
+  <meta name="description" content="智农宝 · 农业大数据分析工作台（本机比赛资料重建版，离线可运行）">
+  <title>智农宝 · 农业大数据分析工作台</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V4h10v4M7 18H5V9h14v9h-2M7 14h10v6H7z"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 5H6a2 2 0 0 0-2 2v9"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M18 14v5H5V6h5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.1"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16V9M12 16v-5M16 16v-8"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4 20c0-8 6-14 16-15 0 10-5 15-12 15H4z"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M6.5 18a4 4 0 0 1-.5-7.98 5.5 5.5 0 0 1 10.7 1.4A3.5 3.5 0 0 1 17.5 18z"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V5m0 0 4 4m-4-4-4 4M5 20h14"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M5 14c-1 3-1 5-1 5s2 0 5-1M9 15l-2-2c1.5-4.5 5-8 10-10 0 5-2 9-7 11z"/><circle cx="14.5" cy="9.5" r="1.4"/></symbol>
+  <symbol id="i-restore" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5M22 8v5"/></symbol>
+</svg>
+
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#/" aria-label="智农宝首页">
+      <span class="brand-mark">田</span>
+      <span class="brand-text"><strong>智农宝</strong><small>农业数据工作台</small></span>
+    </a>
+    <button class="search-trigger" id="open-search" type="button">
+      <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+      <span>搜索省份 / 指标 / 数据集</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <p class="nav-label">项目展示</p>
+      <a href="#/presentation" data-route="/presentation"><span>项目与答辩</span></a>
+      <a href="#/recovery" data-route="/recovery"><span>数据备份与恢复</span></a>
+      <p class="nav-label">卷分类演示（四部）</p>
+      <a href="#/parts" data-route="/parts"><span>📖 卷分类总目</span></a>
+      <a href="#/part/part1" data-route="/part/part1"><span>Ⅰ 国土与数据</span></a>
+      <a href="#/part/part2" data-route="/part/part2"><span>Ⅱ 作物与田畴</span></a>
+      <a href="#/part/part3" data-route="/part/part3"><span>Ⅲ 预测与决策</span></a>
+      <a href="#/part/part4" data-route="/part/part4"><span>Ⅳ 四十八年长卷</span></a>
+      <p class="nav-label">改革开放决策</p>
+      <a href="#/reform" data-route="/reform"><span>广东 1978—2026</span></a>
+      <p class="nav-label">智慧农业</p>
+      <a href="#/smart-plan" data-route="/smart-plan"><span>种植防亏损</span></a>
+      <a href="#/predict" data-route="/predict"><span>产量与价格预测</span></a>
+      <a href="#/digital-farm" data-route="/digital-farm"><span>数字农田生态</span></a>
+      <p class="nav-label">分析工作台</p>
+      <a href="#/" data-route="/"><span>总览</span></a>
+      <a href="#/data" data-route="/data"><span>数据总览</span></a>
+      <a href="#/map" data-route="/map"><span>省域分布</span></a>
+      <a href="#/compare" data-route="/compare"><span>区域对比</span></a>
+      <a href="#/crop-data" data-route="/crop-data"><span>作物指标</span></a>
+      <a href="#/macro" data-route="/macro"><span>宏观与劳动力</span></a>
+      <a href="#/forecast" data-route="/forecast"><span>趋势预测</span></a>
+      <a href="#/model" data-route="/model"><span>模型与图表</span></a>
+      <p class="nav-label">业务工具</p>
+      <a href="#/farming-cost" data-route="/farming-cost"><span>种植成本测算</span></a>
+      <a href="#/data-upload" data-route="/data-upload"><span>CSV 数据导入</span></a>
+      <a href="#/gov-dashboard" data-route="/gov-dashboard"><span>区域工作台</span></a>
+      <p class="nav-label">资料与说明</p>
+      <a href="#/datasets" data-route="/datasets"><span>数据集目录</span></a>
+      <a href="#/features" data-route="/features"><span>功能与恢复进度</span></a>
+      <a href="#/about" data-route="/about"><span>恢复说明</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <span class="dot"></span>
+      <span>离线运行 · 数据不出本机</span>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-button" id="menu-button" type="button" aria-label="展开导航">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+      <div class="crumb">智农宝 <span>/</span> <span id="crumb">总览</span></div>
+      <div class="topbar-actions">
+        <button class="icon-button" id="open-search-2" type="button" aria-label="全局搜索" title="全局搜索 (Ctrl+K)">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+        </button>
+        <button class="icon-button" id="print-button" type="button" aria-label="打印当前页" title="打印 / 另存 PDF">
+          <svg class="icon" aria-hidden="true"><use href="#i-print"/></svg>
+        </button>
+        <span class="badge">竞赛 · 硕士毕设版</span>
+      </div>
+    </header>
+
+    <main id="view" tabindex="-1">
+      <div class="skeleton-wrap" aria-live="polite">
+        <div class="skeleton skeleton-title"></div>
+        <div class="skeleton-row"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+        <div class="skeleton skeleton-block"></div>
+        <p class="loading-text">正在载入本机农业数据…</p>
+      </div>
+    </main>
+
+    <footer class="site-foot">
+      <span>数据来自本机比赛工作簿，统计口径以原表为准。</span>
+      <span>原 Manus 站点源码未恢复，本工作台为有证据支撑的重建实现。</span>
+      <a href="#/about">恢复边界说明</a>
+    </footer>
+  </div>
+</div>
+
+<div class="palette" id="palette" hidden>
+  <div class="palette-panel" role="dialog" aria-modal="true" aria-label="全局搜索">
+    <div class="palette-input">
+      <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="palette-input" autocomplete="off" spellcheck="false" placeholder="搜索省份、指标、工作表、页面…">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="palette-results" id="palette-results"></div>
+    <div class="palette-foot"><span>↑↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightbox-close" type="button" aria-label="关闭">
+    <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" alt="">
+    <figcaption>
+      <span id="lightbox-title"></span>
+      <a class="lightbox-download" id="lightbox-download" download>
+        <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> 下载原图
+      </a>
+    </figcaption>
+  </figure>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<button class="to-top" id="to-top" type="button" hidden aria-label="回到顶部">
+  <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>
+</button>
+
+<script src="assets/vendor/papaparse.min.js" defer></script>
+<script src="data/core-data.js" defer></script>
+<script src="assets/vendor/echarts.min.js" defer></script>
+<script src="assets/js/charts.js" defer></script>
+<script src="assets/js/book_parts.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
