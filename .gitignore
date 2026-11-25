@@ -41,3 +41,8 @@ Thumbs.db
 
 # ── 运行时状态（含用户阅读进度，不应入库）──────────
 app/data/progress.json
+
+# 网站版子项目
+website-v2/node_modules/
+website-v2/desktop/build/
+website-v2/outputs/

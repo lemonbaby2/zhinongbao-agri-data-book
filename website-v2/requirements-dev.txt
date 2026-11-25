@@ -1,0 +1,5 @@
+# 仅打包与开发需要；运行安装版不需要任何依赖
+pyinstaller>=6.0
+pillow>=10.0
+# 自动化验收（可选，需要 Node 18+，浏览器用本机 Edge/Chrome）
+# cd 到包根目录后执行：npm i playwright && node tools/smoke_test.mjs

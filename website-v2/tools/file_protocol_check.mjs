@@ -1,0 +1,16 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch({ channel: 'msedge' });
+const page = await browser.newPage();
+const errs = [];
+page.on('pageerror', e => errs.push(e.message));
+await page.goto('file:///E:/现代信息/智农宝_网站安装包/site/index.html');
+await page.waitForSelector('#view h1', { timeout: 15000 });
+console.log('首页标题:', (await page.locator('#view h1').innerText()).trim());
+await page.click('a[href="#/forecast"]');
+await page.waitForTimeout(1200);
+console.log('预测页:', (await page.locator('#view h1').innerText()).trim(), '图表:', await page.locator('#fc-chart svg').count());
+await page.goto('file:///E:/现代信息/智农宝_网站安装包/site/index.html#/dataset/754403788736c810');
+await page.waitForTimeout(1500);
+console.log('工作簿页提示:', (await page.locator('#dt-table').innerText()).slice(0, 60).replace(/\n/g,' '));
+console.log('pageerror:', errs.length);
+await browser.close();

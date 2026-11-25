@@ -1,0 +1,122 @@
+[
+  {
+    "name": "A01_第一产业占GDP比重断崖下降",
+    "file": "A01_第一产业占GDP比重断崖下降.png",
+    "sha256": "a335e18b756b94f374db5571a04364a843fc928ad1cfdc48bbba03b417572519"
+  },
+  {
+    "name": "A02_劳动力转移与种植结构关联",
+    "file": "A02_劳动力转移与种植结构关联.png",
+    "sha256": "29f5c4bffd118d887201388554c357265980d0d7a46e6c45a5e204d439fece3d"
+  },
+  {
+    "name": "A03_农村居民收入增长轨迹",
+    "file": "A03_农村居民收入增长轨迹.png",
+    "sha256": "1230edb876477b8a27c3c6d0ce0a33dce8515d7945d41cefd0f34e0161d01991"
+  },
+  {
+    "name": "A04_31省农业比重热力图",
+    "file": "A04_31省农业比重热力图.png",
+    "sha256": "f1c9ebd4266941a6d91cf233280705918ca80351ac3f58eb382155f5b9fecb70"
+  },
+  {
+    "name": "A05_乡村振兴综合指数",
+    "file": "A05_乡村振兴综合指数.png",
+    "sha256": "abc620d0876a98f043e975e555a78878ba9d5cebf3b0e0bfc131c65cb0667937"
+  },
+  {
+    "name": "B06_回归模型对比",
+    "file": "B06_回归模型对比.png",
+    "sha256": "070cbd5edc97f7fe444d1a0edc08f5b1ebf4cdd8031a1183f33d8d7f40a833fe"
+  },
+  {
+    "name": "B07_交叉验证稳定性",
+    "file": "B07_交叉验证稳定性.png",
+    "sha256": "1442af7398dcfed0f0d3a8f1cd9edeb414e4f94511ee4c5300e2c54180e50b9c"
+  },
+  {
+    "name": "B08_特征重要性TOP18",
+    "file": "B08_特征重要性TOP18.png",
+    "sha256": "b7f864693a567354f667fea6969f1970a33f333d4d19819ad579a70dfa0dbc30"
+  },
+  {
+    "name": "B09_四区R2对比",
+    "file": "B09_四区R2对比.png",
+    "sha256": "a333c504b23d5e8422f930426323d66482abc2d9efd051c00eed921e809203de"
+  },
+  {
+    "name": "B10_散点图与残差",
+    "file": "B10_散点图与残差.png",
+    "sha256": "af12d2cc7584a58c42d54c4ffeb6a82fafed416b9ed5a6288abecdcbfab9b573"
+  },
+  {
+    "name": "C11_SARIMA时序预测",
+    "file": "C11_SARIMA时序预测.png",
+    "sha256": "bed069222549b7f682fa6f5a100a8effa61b191adb5ae45d1a9b60cc63c3d3d9"
+  },
+  {
+    "name": "C12_农业比重趋势预测至2030",
+    "file": "C12_农业比重趋势预测至2030.png",
+    "sha256": "c94d73584580685a245ac6e8cf6c66bb3a63ae83dc3c1a901d4a749a7905f915"
+  },
+  {
+    "name": "D13_PCA省份聚类",
+    "file": "D13_PCA省份聚类.png",
+    "sha256": "0b32ad53211c1544c6acdac694deb808273fda802f45589abf1110a5520027ee"
+  },
+  {
+    "name": "D14_经济指标相关性热力图",
+    "file": "D14_经济指标相关性热力图.png",
+    "sha256": "fab9fc5096baee374f0f4a36628055f9567c175de7d1f60b98a004b17db9a9d6"
+  },
+  {
+    "name": "D15_四区经济结构演变",
+    "file": "D15_四区经济结构演变.png",
+    "sha256": "d1f9687077508c3bc99f35e5188d3d8344146249ace88e72d757c7ed067148b9"
+  },
+  {
+    "name": "D16_人均GDP与农业比重散点图",
+    "file": "D16_人均GDP与农业比重散点图.png",
+    "sha256": "19ce499d20fd4473d00b2bd7f28a2495a0fdbe68a5ecd43b2c066e2055ef27ed"
+  },
+  {
+    "name": "E17_城乡收入趋势",
+    "file": "E17_城乡收入趋势.png",
+    "sha256": "2106aad4063746096c4180c12a0620b1b043d37273e994c319841d49e05b9675"
+  },
+  {
+    "name": "E19_风险预警混淆矩阵V135",
+    "file": "E19_风险预警混淆矩阵V135.png",
+    "sha256": "5e4dee04bcb2d7abe017972ea5c27236461525aafaefe248f78e35fb211c2b43"
+  },
+  {
+    "name": "E20_四区雷达图",
+    "file": "E20_四区雷达图.png",
+    "sha256": "5cc2afb588859548d7b0402f876a17b80c5fd0030134b4c36916af92a273db38"
+  },
+  {
+    "name": "E21_结论仪表盘",
+    "file": "E21_结论仪表盘.png",
+    "sha256": "3be981b76eacc2281324f981e336833629d01e6a81092535bdc6c4f88f1d6a06"
+  },
+  {
+    "name": "E22_31省经济与收入横向对比",
+    "file": "E22_31省经济与收入横向对比.png",
+    "sha256": "b8f1544ea8d7a4ee33c70d88ce964773b5b01da6e948634213b3dc9a1c48b1ec"
+  },
+  {
+    "name": "E23_农作物复种与种植率变化",
+    "file": "E23_农作物复种与种植率变化.png",
+    "sha256": "e948ba97b2aba33de020fb57ee9ed96a684f332fc4b7616e77a7693551bd508a"
+  },
+  {
+    "name": "E24_ROC与PR曲线V135",
+    "file": "E24_ROC与PR曲线V135.png",
+    "sha256": "905d14dad3faabbe97cb4497bba6752b7d81167c12c297f61249dd90bcf2bec1"
+  },
+  {
+    "name": "E25_分类器全面对比V135",
+    "file": "E25_分类器全面对比V135.png",
+    "sha256": "1c777a408c7552c940b29077845687218f378ea1ca1cacb8f698f77ef74f96f5"
+  }
+]
